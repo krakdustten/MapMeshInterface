@@ -7,6 +7,7 @@ from pathlib import Path
 
 import voluptuous as vol
 from homeassistant import config_entries
+from homeassistant.components.http import StaticPathConfig
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import Platform
 from homeassistant.core import HomeAssistant
@@ -110,12 +111,17 @@ async def _register_lovelace_resource(hass: HomeAssistant) -> None:
     if domain_data.get("lovelace_registered"):
         return
 
-    card_path = Path(__file__).parent / "www" / "mapmesh-card.js"
-    if not card_path.is_file():
-        _LOGGER.warning("MapMe Lovelace card not found at %s", card_path)
+    www_path = Path(__file__).parent / "www"
+    if not (www_path / "mapmesh-card.js").is_file():
+        _LOGGER.warning("MapMe Lovelace card not found at %s", www_path / "mapmesh-card.js")
         return
 
-    hass.http.register_static_path(CARD_URL, str(card_path))
+    try:
+        await hass.http.async_register_static_paths(
+            [StaticPathConfig("/mapmesh", str(www_path), cache_headers=False)]
+        )
+    except RuntimeError:
+        _LOGGER.debug("MapMe static path already registered")
 
     if "lovelace" not in hass.data:
         domain_data["lovelace_registered"] = True
