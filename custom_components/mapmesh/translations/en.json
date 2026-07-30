@@ -1,0 +1,60 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Set up MapMe",
+        "description": "Enter your MapMe user ID (public key) from mapme.sh.",
+        "data": {
+          "user_id": "User ID",
+          "name": "Display name override (optional)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to mapme.sh.",
+      "invalid_user": "User not found. Check your user ID."
+    },
+    "abort": {
+      "already_configured": "This user is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "MapMe options",
+        "description": "Configure polling for this user.",
+        "data": {
+          "scan_interval": "Scan interval (seconds)"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "profile": {
+        "name": "Profile"
+      },
+      "rank": {
+        "name": "Rank"
+      },
+      "points": {
+        "name": "Points"
+      },
+      "total_samples": {
+        "name": "Total samples"
+      },
+      "unique_hexes": {
+        "name": "Unique hexes"
+      },
+      "pioneer_hexes": {
+        "name": "Pioneer hexes"
+      },
+      "active_days": {
+        "name": "Active days"
+      },
+      "unique_repeaters": {
+        "name": "Unique repeaters"
+      }
+    }
+  }
+}

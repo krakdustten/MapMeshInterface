@@ -1,0 +1,11 @@
+{
+  "domain": "mapmesh",
+  "name": "MapMe",
+  "codeowners": ["@dylan"],
+  "config_flow": true,
+  "documentation": "https://github.com/dylan/mapmeshinterface",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/dylan/mapmeshinterface/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

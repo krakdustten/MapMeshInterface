@@ -1,0 +1,71 @@
+{
+  "pubkey": "2577e905519e6071f776f32bc3d371a7b27b7c18cbd80462a7e64ef07319ac47",
+  "name": "Dylan G",
+  "hardware": "Heltec V3v1.14.1-467959c",
+  "rank": 54,
+  "points": 53847,
+  "stats": {
+    "totalSamples": 51462,
+    "uniqueHexes": 7675,
+    "rxHexes": 683,
+    "activeDays": 88,
+    "uniqueRepeaters": 189,
+    "pioneerHexes": 2981,
+    "firstSeen": 1775157695639,
+    "lastSeen": 1785303492282,
+    "daysSinceFirst": 118
+  },
+  "badges": [
+    {
+      "id": "trailblazer",
+      "name": "Trailblazer",
+      "icon": "map",
+      "tier": "gold",
+      "label": "Gold",
+      "color": "#fbbf24",
+      "desc": "Unique hexes visited",
+      "value": 7675,
+      "next": 75000
+    },
+    {
+      "id": "sojourner",
+      "name": "Sojourner",
+      "icon": "fire",
+      "tier": "bronze",
+      "label": "Bronze",
+      "color": "#cd7f32",
+      "desc": "Days active",
+      "value": 88,
+      "next": 90
+    },
+    {
+      "id": "early_bird",
+      "name": "Early Bird",
+      "icon": "sunrise",
+      "tier": "special",
+      "desc": "Mapped before 6am"
+    },
+    {
+      "id": "road_trip",
+      "name": "Road Trip",
+      "icon": "car",
+      "tier": "gold",
+      "label": "Gold",
+      "color": "#fbbf24",
+      "desc": "Most hexes in a single day",
+      "value": 1423,
+      "next": 5000
+    },
+    {
+      "id": "grinder",
+      "name": "Grinder",
+      "icon": "chart",
+      "tier": "gold",
+      "label": "Gold",
+      "color": "#fbbf24",
+      "desc": "Most samples in a single day",
+      "value": 2519,
+      "next": 15000
+    }
+  ]
+}
