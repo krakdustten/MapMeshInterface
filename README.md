@@ -68,13 +68,19 @@ type: custom:mapmesh-card
 entity: sensor.dylan_g_profile
 ```
 
-The card shows name, hardware, rank, points, a stats grid, and badges with tier colors and progress.
+The card uses Home Assistant theme colors with a MapMe-style layout:
+
+- Compact header (name, hardware, rank, points)
+- Hero stats for hexes, samples, and active days
+- Collapsible **More stats** for the remaining metrics
+- Achievement rows with emoji icons, tier pills, and progress toward the next tier
 
 ## Development
 
 ```bash
 pip install -r requirements_test.txt
 pytest
+npm run test:js
 ```
 
 ## License

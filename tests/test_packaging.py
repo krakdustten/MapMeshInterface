@@ -26,5 +26,6 @@ def test_hacs_json_valid() -> None:
 
 
 def test_card_file_exists() -> None:
-    """Test Lovelace card file exists."""
+    """Test Lovelace card files exist."""
     assert (COMPONENT / "www" / "mapmesh-card.js").is_file()
+    assert (COMPONENT / "www" / "mapmesh-card-logic.js").is_file()

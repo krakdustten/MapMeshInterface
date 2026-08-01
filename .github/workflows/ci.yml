@@ -12,7 +12,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
       - name: Install dependencies
         run: pip install -r requirements_test.txt
-      - name: Run tests
+      - name: Run Python tests
         run: pytest -q
+      - name: Run JS tests
+        run: npm run test:js
